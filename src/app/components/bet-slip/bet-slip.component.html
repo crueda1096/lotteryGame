@@ -1,0 +1,17 @@
+<div class="container">
+    <button *ngFor="let ball of selectedBalls"  [style.background-color]="ball.color" class="balls">
+        <span class="ballnumber">
+            {{ball.number}}
+        </span>
+     </button>
+     <br>
+     <br>
+     <div class="input">
+        <div class="input-box">
+            <span class="prefix">X5</span>
+            <input ng type="number" [(ngModel)]="value" placeholder="bet value " (keyup.enter)="setValue()"/>
+            <button class="btn" (click)="setValue()" >OK</button>
+        </div>
+    </div>
+     
+</div>

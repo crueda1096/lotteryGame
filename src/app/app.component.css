@@ -1,0 +1,59 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #DDDADA;
+    padding: 10px;
+}
+
+.ballselector{
+    width: 60%;
+    height: 100%;
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.ballselector div{
+    padding: 10px;    
+    text-align: center;
+}
+
+.betslip{
+    width: 40%;
+    margin: 5px;
+    padding: 5px;    
+}
+
+.betslip .slip{
+    background-color: #fff !important;
+}
+
+.betslip div{
+    padding: 5px;
+}
+
+.tittle{
+    text-align: left;
+    font-size: 20px;
+}
+
+.actions{
+    text-align: center;
+}
+
+
+.bet {
+    flex-grow: 1;
+    font-size: 14px;
+    background: #00B9FF;
+    color: #fff;
+    width: 70%;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.bet:hover {
+    background: #a0a0a0;
+}
