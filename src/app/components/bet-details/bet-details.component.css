@@ -1,0 +1,62 @@
+
+.balls{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 5px;
+    display: inline-grid;
+    border: 1px solid;
+}
+
+.balls:hover:enabled{
+    transform: scale(1.2);
+}
+
+.ballnumber{
+    font-size: 25px;
+}
+
+.clear{
+    background-color: #fff;
+    border: 0px;
+    font-size: 20px;
+    color: turquoise;
+    cursor: pointer;
+}
+
+.clear:hover{
+    color: #DDDADA;
+}
+
+.lost{
+    text-align: center;
+    font-size: x-large;
+    color: #FF0000;
+}
+
+.won{
+    text-align: center;
+    font-size: x-large;
+    color: #2EFF00;
+}
+
+.tittle{
+    text-align: center;
+    font-size: x-large;
+    
+}
+
+
+.btn{
+    flex-grow: 1;
+    font-size: 14px;    
+    background: #00B9FF;
+    padding: 0.5em;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.btn:hover {
+    background: #a0a0a0;
+}

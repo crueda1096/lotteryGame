@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BallsService } from 'src/app/service/balls.service';
 import {ballsInterface} from '../../models/balls';
 import {BetService} from '../../service/bet.service';
+import { FormBuilder, FormGroup, Validators, ValidatorFn, AbstractControl, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-bet-slip',
@@ -11,8 +12,13 @@ import {BetService} from '../../service/bet.service';
 export class BetSlipComponent implements OnInit {
   selectedBalls:ballsInterface[] = [];
   value:number = 0;
+  betValueControl = new FormGroup({
 
-  constructor(public _BallsService:BallsService, public BetService:BetService) { }
+    amount: new FormControl('', [Validators.required, Validators.min(5)])
+
+  });
+
+  constructor(public _BallsService:BallsService, public _BetService:BetService, private _FormBuilder: FormBuilder ) { }
 
   ngOnInit(): void {
     this._BallsService.receivedData().subscribe((result:any)=>{
@@ -20,8 +26,13 @@ export class BetSlipComponent implements OnInit {
     })
   }
 
-  setValue(){
-    this.BetService.spreadValue(this.value);  
+  async setValue(){
+    await this._BetService.spreadValue(this.betValueControl.controls['amount'].value);  
+    this.betValueControl.controls['amount'].setValue(0)
+  }
+
+  selectAllContent($event:any) {
+    $event.target.select();
   }
 
 }

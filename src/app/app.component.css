@@ -54,6 +54,10 @@
     padding: 0.5rem;
 }
 
-.bet:hover {
+.bet:hover:enabled {
     background: #a0a0a0;
+}
+
+.bet:disabled {
+    cursor: auto;
 }

@@ -24,12 +24,13 @@ export class BallSelectorComponent implements OnInit {
   selectBall(ball:ballsInterface){
     ball.ingame = true;
     let balls = this.balls.filter(b => b.ingame==true);
+    console.log(ball)
     this._BallsService.spreadBalls(balls);
   }
 
   clearBalls(){
     this.balls.map(b=> b.ingame = false)
-    this._BallsService.spreadBalls(null);
+    this._BallsService.spreadBalls([]);
   }
 
 }
