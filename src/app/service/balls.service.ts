@@ -80,7 +80,6 @@ export class BallsService {
 
 
   spreadBalls(data:any){
-    console.log("data --> ",data)
     this.selectedBallsSubject.next(data);
   }
 

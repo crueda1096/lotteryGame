@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BetService} from './service/bet.service';
 import {ballsInterface} from './models/balls';
-import { BallsService } from 'src/app/service/balls.service';
+import { BallsService } from './service/balls.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,10 @@ export class AppComponent implements OnInit{
   constructor(public _BetService:BetService,public _BallsService:BallsService){}
 
   ngOnInit(): void {
+    this.loadData();
+  }
 
+  loadData(){
     this._BetService.receivedData().subscribe(result=>{
       this.betValue = result*5;
     });
@@ -30,7 +33,6 @@ export class AppComponent implements OnInit{
     this._BallsService.getBalls().subscribe((result:any) => {
       this.balls = result;
     })
-
   }
 
   makeBet(): void {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BallsService } from 'src/app/service/balls.service';
+import { BallsService } from '../../service/balls.service';
 import {ballsInterface} from '../../models/balls';
 import {BetService} from '../../service/bet.service';
 import { FormBuilder, FormGroup, Validators, ValidatorFn, AbstractControl, FormControl } from '@angular/forms';
@@ -21,6 +21,10 @@ export class BetSlipComponent implements OnInit {
   constructor(public _BallsService:BallsService, public _BetService:BetService, private _FormBuilder: FormBuilder ) { }
 
   ngOnInit(): void {
+    this.getSelectedBalls();
+  }
+
+  getSelectedBalls():void{
     this._BallsService.receivedData().subscribe((result:any)=>{
       this.selectedBalls = result;
     })

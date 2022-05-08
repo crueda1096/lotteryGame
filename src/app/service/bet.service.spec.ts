@@ -13,4 +13,10 @@ describe('BetService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('test spread',()=>{
+    let data = 0;
+    service.spreadValue(data);
+  });
+
 });
