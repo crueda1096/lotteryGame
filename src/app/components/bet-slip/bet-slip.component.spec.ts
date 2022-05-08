@@ -57,6 +57,14 @@ describe('BetSlipComponent', () => {
     expect(spy).toBeCalled();
   })
 
+  it('setvalue >5 test',()=>{
+    const amountField = component.betValueControl.get('amount');
+    amountField?.setValue('2');
+    const spy = jest.spyOn(betService,'spreadValue').mockImplementation(()=>null);
+    component.setValue();
+    expect(spy).toHaveBeenCalledTimes(0);
+  })
+
   it('setvalue form invalid test',()=>{
     const amountField = component.betValueControl.get('amount');
     amountField?.setValue('2');

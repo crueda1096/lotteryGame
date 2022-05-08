@@ -23,14 +23,13 @@
     display: flex;
     align-items: center;
     width: 100%;
-    background: #a0a0a0;
-    border: 1px solid #a0a0a0;
-    border-radius: 4px;
+    border: 1px solid #F0F0F0;
     overflow: hidden;
     font-family: sans-serif;
+    background-color: #F0F0F0;
 }
 
-.input-box .btn{
+.btn{
     flex-grow: 1;
     font-size: 14px;    
     background: #00B9FF;
@@ -42,7 +41,6 @@
 .input-box .prefix {
     font-size: 14px;
     width: 40px;
-    color: #fff;
 }
   
 .input-box input {
@@ -65,4 +63,8 @@
 }
 .warning{
     color:#FFAA00;
+}
+
+.components{
+    display: flex;
 }

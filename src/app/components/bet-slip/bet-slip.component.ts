@@ -31,6 +31,9 @@ export class BetSlipComponent implements OnInit {
   }
 
   async setValue(){
+    if(this.betValueControl.controls['amount'].value < 5){
+      return;
+    }
     await this._BetService.spreadValue(this.betValueControl.controls['amount'].value);  
     this.betValueControl.controls['amount'].setValue(0)
   }
@@ -38,5 +41,6 @@ export class BetSlipComponent implements OnInit {
   selectAllContent($event:any) {
     $event.target.select();
   }
+
 
 }
