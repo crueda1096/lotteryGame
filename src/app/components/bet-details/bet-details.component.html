@@ -1,0 +1,24 @@
+<div>
+    <span class="tittle">
+        Result
+    </span>
+    <br>
+    <div  [style.background-color]="detailsData.dataBall.color" class="balls" >
+        <p class="ballnumber">
+            {{detailsData.dataBall.number}}
+        </p>
+    </div>
+    <br>
+    <span class="{{detailsData.class}}">
+        {{detailsData.msg}}
+    </span>
+    <span *ngIf="detailsData.status === 'winner'">
+        {{reward|currency:'EUR':true}}
+    </span>
+    <br><br>
+    <button class="btn btn-primary" (click)="clear()">
+        New Bet
+    </button>
+</div>
+ <br>
+ <br>

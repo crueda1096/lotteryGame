@@ -1,0 +1,27 @@
+.balls{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.balls:hover:enabled{
+    transform: scale(1.2);
+}
+
+.ballnumber{
+    font-size: 30px;
+}
+
+.clear{
+    background-color: #fff;
+    border: 0px;
+    font-size: 20px;
+    color: turquoise;
+    cursor: pointer;
+}
+
+.clear:hover{
+    color: #DDDADA;
+}

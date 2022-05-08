@@ -1,0 +1,23 @@
+<div class="container">
+    <button *ngFor="let ball of selectedBalls"  [style.background-color]="ball.color" class="balls">
+        <span class="ballnumber">
+            {{ball.number}}
+        </span>
+     </button>
+     <br>
+     <br>
+     <div class="input">
+        <div class="components">
+            <div class="input-box">
+                <span class="prefix">X5</span>
+                <form [formGroup]="betValueControl">
+                    <input ng formControlName="amount" type="number" [(ngModel)]="value" placeholder="bet value " (keyup.enter)="setValue()" (focus)="selectAllContent($event)"/>                
+                </form>            
+            </div>
+            <button class="btn btn-primary" [disabled]="betValueControl.invalid" type="submit" (click)="setValue()" >OK</button>
+        </div>        
+        <br>
+        <span *ngIf="betValueControl.invalid" class="warning"> The minimum value to bet is 5 </span>
+    </div>
+     
+</div>

@@ -1,0 +1,70 @@
+.balls{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.balls:hover{
+    transform: scale(1.2);
+}
+
+.ballnumber{
+    font-size: 15px;
+}
+
+.container{
+    text-align: center;
+}
+
+
+.input-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #F0F0F0;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: #F0F0F0;
+}
+
+.btn{
+    flex-grow: 1;
+    font-size: 14px;    
+    background: #00B9FF;
+    outline: none;
+    padding: 0.5em;
+    margin-left: 5px;
+}
+  
+.input-box .prefix {
+    font-size: 14px;
+    width: 40px;
+}
+  
+.input-box input {
+    flex-grow: 1;
+    font-size: 14px;
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    text-align: end;
+}
+  
+.input-box:focus-within {
+    border-color: #777;
+}
+
+.input { 
+      text-align: center;
+      display: inline-block;
+}
+.warning{
+    color:#FFAA00;
+}
+
+.components{
+    display: flex;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="ballselector">
+    <strong class="tittle" *ngIf="objResult === null">
+      Numbers
+    </strong>
+    <br>
+    <div>
+      <app-ball-selector *ngIf="objResult === null"></app-ball-selector>
+      <app-bet-details *ngIf="objResult !== null" [detailsData]="objResult" [betValue]="betValue" (clearBet)="clearBet()" ></app-bet-details>
+    </div>    
+  </div>
+  <div class="betslip">
+    <div class="slip" >
+      <div>
+        <app-bet-slip></app-bet-slip>
+      </div>  
+    </div> 
+    <div class="actions">
+      <br>
+      TOTAL: {{betValue|currency:'EUR':true}}
+      <br><br>
+      <button class="bet" [disabled]="betValue === 0  || selectedBalls.length <= 0 || objResult !== null"  (click)="makeBet()">Place Bet</button>
+    </div>    
+  </div>
+</div>

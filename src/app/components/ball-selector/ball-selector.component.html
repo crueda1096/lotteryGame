@@ -1,0 +1,10 @@
+<button *ngFor="let ball of balls"  [style.background-color]="ball.color" class="balls" (click)="selectBall(ball)" [disabled]="ball.ingame">
+   <span class="ballnumber">
+       {{ball.number}}
+   </span>
+</button>
+<br>
+<br>
+<button class="clear" (click)="clearBalls()">
+    Clear Selection
+</button>
