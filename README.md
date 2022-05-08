@@ -18,6 +18,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `npm run test` to execute the unit tests via [jest](https://jestjs.io/), view the test coverage in the directory: ./coverage/lottery/icov-report/index.html
 
+## Running lint
+
+Run ng lint to execute the linting
+
 
 ## Further help
 
